@@ -1,0 +1,42 @@
+﻿<Window x:Class="StageDisplayConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StageDisplayConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" AllowDrop="True">
+    <Grid>
+        <Label Content="Konvertierung von Word --> Powerpoint:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="488" FontSize="22"/>
+
+        <Button Content="Liste Leeren" HorizontalAlignment="Left" Margin="12,106,0,0" VerticalAlignment="Top" Width="477" Click="B_New_Click"/>
+        <Button Content="Dateien umwandeln" HorizontalAlignment="Left" Margin="12,81,0,0" VerticalAlignment="Top" Width="477" Click="B_Convert_Click"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="27" Margin="194,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="295" DragDrop.Drop="Rectangle_Drop"/>
+        <Label Content="Word-Dateien hier ablegen:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="179" FontSize="14"/>
+        <ListBox HorizontalAlignment="Left" Height="403" Margin="10,156,0,0" VerticalAlignment="Top" Width="479" ItemsSource="{Binding FilesToConvert}" SelectedItem="{Binding FilesToConvert_Selected, Mode=OneWayToSource}"/>
+        <Button Content="Ausgewählte Datei aus Liste löschen" HorizontalAlignment="Left" Margin="12,131,0,0" VerticalAlignment="Top" Width="477" Click="B_RemoveWord_Click"/>
+
+
+        <GridSplitter HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="0,0" Background="Gray" Width="5"/>
+        <Label Content="Zusammenführen der Powerpoints:" HorizontalAlignment="Left" Margin="518,10,0,0" VerticalAlignment="Top" Width="488" FontSize="22"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="27" Margin="750,47,0,0" Stroke="Black" VerticalAlignment="Top" Width="256" DragDrop.Drop="PPTDrop" />
+        <!---->
+        <Label Content="Powerpoint-Dateien hier ablegen:" HorizontalAlignment="Left" Margin="518,47,0,0" VerticalAlignment="Top" Width="227" FontSize="14"/>
+        <ListBox Name="LB_PPTsToMerge" HorizontalAlignment="Left" Height="403" Margin="518,156,0,0" VerticalAlignment="Top" Width="468" ItemsSource="{Binding FilesToMerge}" SelectedItem="{Binding FilesToMerge_Selected, Mode=OneWayToSource}" Panel.ZIndex="2"/>
+        <Button Content="Liste Leeren" HorizontalAlignment="Left" Margin="518,106,0,0" VerticalAlignment="Top" Width="488" Click="B_New_Click"/>
+        <Button Content="Ausgewählte Datei aus Liste löschen" HorizontalAlignment="Left" Margin="518,131,0,0" VerticalAlignment="Top" Width="488" Click="B_RemovePowerpoint_Click"/>
+        <Button Content="Powerpoints zusammenführen" HorizontalAlignment="Left" Margin="518,81,0,0" VerticalAlignment="Top" Width="488" Click="B_MergePPTs_Click"/>
+        
+        <Button Content="^" HorizontalAlignment="Left" Margin="984,168,0,0" VerticalAlignment="Top" Width="20" Height="185" Panel.ZIndex="1" Click="MovePPTUp_Click"/>
+<Button Content="^" HorizontalAlignment="Left" Margin="984,362,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.5,0.5" Height="186" Panel.ZIndex="1" Click="MovePPTDown_Click">
+    <Button.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform/>
+            <SkewTransform/>
+            <RotateTransform Angle="180"/>
+            <TranslateTransform/>
+        </TransformGroup>
+    </Button.RenderTransform>
+</Button>
+    </Grid>
+</Window>
