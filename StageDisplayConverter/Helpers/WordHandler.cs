@@ -63,8 +63,15 @@ namespace StageDisplayConverter.Helpers
 
                 }
                 else {
-                    w.GetPoint(out left, out top, out width, out height, range);
-                    unindentedParagraphLeft = left;
+                    try {
+                        w.GetPoint(out left, out top, out width, out height, range);
+                    }
+                    catch {
+                        
+                    }
+                    finally {
+                        unindentedParagraphLeft = left;
+                    }
                 }
 
 

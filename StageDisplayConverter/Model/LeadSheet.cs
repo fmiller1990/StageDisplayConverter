@@ -33,6 +33,7 @@ namespace StageDisplayConverter.Model
         public List<string> Interlude1 = new List<string>();
         public List<string> Interlude2 = new List<string>();
         public List<string> Interlude3 = new List<string>();
+        public List<string> Instrumental = new List<string>();
         public List<string> Outro = new List<string>();
         public List<string> Hook = new List<string>();
         public List<string> Ending = new List<string>();
@@ -144,6 +145,9 @@ namespace StageDisplayConverter.Model
                 case "INTERLUDE3":
                     Interlude3.AddRange(trimmedLines);
                     break;
+                case "INSTRUMENTAL":
+                    Instrumental.AddRange(trimmedLines);
+                    break;
                 case "OUTRO":
                     Outro.AddRange(trimmedLines);
                     break;
@@ -235,7 +239,8 @@ namespace StageDisplayConverter.Model
                     return string.Join("\n", Interlude1);
                 case "INTERLUDE":
                     return string.Join("\n", Interlude);
-
+                case "INSTRUMENTAL":
+                    return string.Join("\n", Instrumental);
                 case "OUTRO":
                     return string.Join("\n", Outro);
                 case "HOOK":

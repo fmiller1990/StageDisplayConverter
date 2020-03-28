@@ -35,7 +35,7 @@ namespace StageDisplayConverter.Helpers
                         { "V8" ,System.Drawing.Color.FromArgb(255, 255,255,255) },
                           { "VERSE" ,System.Drawing.Color.FromArgb(255, 255,255,255) },
             { "VERS" ,System.Drawing.Color.FromArgb(255, 255,255,255) },
-                      
+
                 {  "PRECHORUS2",System.Drawing.Color.FromArgb(255, 255,217,102) },
                         {  "PRE-CHORUS2",System.Drawing.Color.FromArgb(255, 255,217,102) },
                 {  "PRECHORUS",System.Drawing.Color.FromArgb(255, 255,217,102) },
@@ -50,9 +50,10 @@ namespace StageDisplayConverter.Helpers
                 {  "INTERLUDE2",System.Drawing.Color.FromArgb(255,66, 238, 244) },
                 {  "INTERLUDE1",System.Drawing.Color.FromArgb(255,66, 238, 244) },
                 {  "INTERLUDE",System.Drawing.Color.FromArgb(255,66, 238, 244) },
+                {  "INSTRUMENTAL",System.Drawing.Color.FromArgb(255,66, 238, 244) },
                 {  "OUTRO",System.Drawing.Color.FromArgb(255, 0,176,240)},
                  {  "HOOK",System.Drawing.Color.FromArgb(255,66, 238, 244)},
-                
+
                 {  "INTRO",System.Drawing.Color.FromArgb(255, 204, 0, 0)},
                 {  "ENDING",System.Drawing.Color.FromArgb(255, 204, 0, 0)},
             };
@@ -66,6 +67,7 @@ namespace StageDisplayConverter.Helpers
                 {  "INTERLUDE2",(float)12 },
                 {  "INTERLUDE1",(float)12 },
                 {  "INTERLUDE",(float)12},
+                {  "INSTRUMENTAL",(float)12},
                 {  "Default",(float)15 },
 
             };
@@ -97,12 +99,12 @@ namespace StageDisplayConverter.Helpers
                         { "V8" ,"VERS 8" },
                         { "VERSE" ,"VERS" },
                 { "VERS" ,"VERS" },
-                        
+
                 {  "PRECHORUS2","PRE-CH 2" },
-                        {  "PRE-CHORUS2","PRE-CH 2" },
+                    {  "PRE-CHORUS2","PRE-CH 2" },
                 {  "PRECHORUS","PRE-CH" },
-                        {  "PRE-CHORUS","PRE-CH" },
-                 {  "CHORUS2", "CH 2" },
+                    {  "PRE-CHORUS","PRE-CH" },
+                {  "CHORUS2", "CH 2" },
                 {  "CHORUS", "CH" },
                 {  "BRIDGE1", "BR 1" },
                 {  "BRIDGE2","BR 2" },
@@ -113,6 +115,7 @@ namespace StageDisplayConverter.Helpers
                 {  "INTERLUDE2","Interl. 2" },
                 {  "INTERLUDE1","Interl. 1" },
                 {  "INTERLUDE","Interl." },
+                {  "INSTRUMENTAL","Inst." },
                 {  "OUTRO", "Outro"},
                 {  "ENDING", "Ending"},
                 {  "INTRO", "Intro"}
